@@ -1,0 +1,42 @@
+{
+  "resubmitted": [
+    {
+      "title": "ShelfLife",
+      "text": "Grocery stores throw away food that is still safe to eat because nobody knows which items are close to their date until it is too late. ShelfLife scans the barcode and lot number on each delivery, predicts when every batch will expire, and sends the store manager a morning list of items to discount before they spoil. We trained the expiry model on two years of anonymized inventory data donated by a family-owned market in our town and built the dashboard with Next.js and a small Postgres database. During the hackathon we added a feature that posts discounted items to a local food bank group chat."
+    },
+    {
+      "title": "Shelf Life",
+      "text": "Grocery stores throw away food that is still safe to eat because nobody knows which items are close to their date until it is too late. Shelf Life scans the barcode and lot number on each delivery, predicts when every batch will expire, and sends the store manager a morning list of items to discount before they spoil. We trained the expiry model on two years of anonymized inventory data donated by a family-owned market in our town and built the dashboard with Next.js and a small Postgres database."
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "Lectern",
+      "text": "Lectern turns a recorded lecture into a study guide. It splits the audio into topics, writes a short summary for each, and links every summary back to the second of the recording it came from so you can check what the professor actually said. We used Whisper for transcription and a small topic segmentation model we fine-tuned on open courseware transcripts. The front end is a Svelte app that works offline once a lecture is processed, because our campus library has terrible wifi."
+    },
+    {
+      "title": "Lecture summarizer (2025)",
+      "text": "A side project from last spring. It splits the audio into topics, writes a short summary for each, and links every summary back to the second of the recording it came from so you can check what the professor actually said. I used Whisper for transcription and a small topic segmentation model fine-tuned on open courseware transcripts. The interface is a Svelte app that keeps working offline once a lecture is processed. Source code and a demo video are on my GitHub."
+    }
+  ],
+  "reworded": [
+    {
+      "title": "StrayMap",
+      "text": "Lost pets are usually found within a mile of home, but owners post on five different apps and neighbors never see the posts. StrayMap collects lost and found pet posts into one shared map for the neighborhood. A volunteer can mark where a pet was last seen, upload a photo, and get a text alert when someone reports a sighting nearby. We built it in React Native with Firebase and used the Google Maps API for the clustering view."
+    },
+    {
+      "title": "FindFido",
+      "text": "Most lost pets turn up within a mile of home, but owners post on five different apps and neighbors never see the posts. FindFido brings lost and found pet posts into one shared map for the neighborhood. Anyone can mark where a pet was last seen, add a photo, and get a text alert when someone reports a sighting nearby. Built with Flutter and Supabase, with Mapbox for the map."
+    }
+  ],
+  "clean": [
+    {
+      "title": "RideShare Campus",
+      "text": "Carpooling to campus is hard to organize because schedules change every semester. RideShare Campus matches students who live near each other and have classes that start within fifteen minutes of one another. It reads the public course catalog, asks each rider for their address once, and suggests a group of three or four. We built it with Django and Leaflet during the weekend and tested the matching on our own dorm."
+    },
+    {
+      "title": "RideShare Commute",
+      "text": "Office workers waste hours alone in traffic. RideShare Commute is a Slack bot for companies that suggests carpool partners based on home zip code and calendar availability. It posts a weekly match in a private channel and tracks how many car trips the team avoided. We wrote it in Go and deployed it on Fly.io for our internship cohort."
+    }
+  ]
+}

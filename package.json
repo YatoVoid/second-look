@@ -1,0 +1,15 @@
+{
+  "name": "second-look",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Browser extension that helps Devpost judges spot projects worth a second look",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/",
+    "lint:firefox": "npx --yes web-ext@8 lint --source-dir dist/firefox"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0"
+  }
+}

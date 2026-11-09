@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "SL VT323";
+  src: url("../fonts/vt323-400.woff2") format("woff2");
+  font-display: block;
+}
+@font-face {
+  font-family: "SL Plex Mono";
+  src: url("../fonts/plex-mono-400.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SL Plex Mono";
+  src: url("../fonts/plex-mono-600.woff2") format("woff2");
+  font-weight: 600;
+}
+:root {
+  --blue: #16238f;
+  --blue-deep: #0d1663;
+  --fg: #d7dcea;
+  --fg-dim: #b4bde3;
+  --white: #ffffff;
+  --yellow: #f4d65a;
+  --cyan: #5cc3cc;
+  --ink: #0b1150;
+  --label: "SL VT323", ui-monospace, monospace;
+  --text: "SL Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  width: 360px;
+  background: var(--blue);
+  color: var(--fg);
+  font: 12px/1.55 var(--text);
+}
+:focus-visible { outline: 2px solid var(--yellow); outline-offset: 1px; }
+.bar {
+  display: flex; justify-content: space-between;
+  background: var(--cyan); color: var(--ink);
+  font: 20px/1 var(--label); padding: 6px 12px 5px;
+}
+.brand { display: flex; align-items: center; gap: 8px; }
+.brand img { image-rendering: pixelated; }
+main { padding: 12px 14px 14px; display: grid; gap: 10px; }
+p { margin: 0; }
+.dim { color: var(--fg-dim); }
+.hi { color: var(--yellow); }
+h1 { font: 22px/1.1 var(--label); font-weight: 400; color: var(--white); margin: 0; }
+dl { display: grid; grid-template-columns: 10ch 1fr; gap: 2px 8px; margin: 0; }
+dt { color: var(--fg-dim); }
+dd { margin: 0; color: var(--white); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+dd.hi { color: var(--yellow); }
+ul { margin: 0; padding: 0; list-style: none; }
+li { color: var(--white); padding: 1px 0 1px 10px; box-shadow: inset 2px 0 0 var(--cyan); }
+li + li { margin-top: 3px; }
+.menu { display: grid; gap: 8px; }
+.menu button, .keys button {
+  font: 18px/1.1 var(--label); color: var(--white);
+  background: none; border: 0; padding: 0; text-align: left; cursor: pointer;
+  display: flex; align-items: baseline; gap: 8px;
+}
+.menu button:hover kbd, .keys button:hover kbd { background: var(--yellow); }
+.menu small { display: block; font: 11.5px/1.45 var(--text); color: var(--fg-dim); padding-left: 30px; margin-top: -4px; }
+kbd { font: inherit; background: var(--fg); color: var(--ink); padding: 1px 5px 0; min-width: 22px; text-align: center; }
+label { display: flex; gap: 8px; align-items: flex-start; padding-left: 30px; margin-top: -2px; }
+input[type="checkbox"] { accent-color: var(--yellow); margin: 2px 0 0; }
+.keys {
+  display: flex; flex-wrap: wrap; gap: 6px 16px;
+  background: var(--blue-deep); padding: 7px 12px;
+}
+.keys button { font-size: 17px; color: var(--fg); }
+.error { color: var(--yellow); }
+.rule { border: 0; border-top: 1px solid var(--fg-dim); margin: 2px 0; opacity: 0.5; }

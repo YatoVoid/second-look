@@ -1,0 +1,35 @@
+<!doctype html><html><body>
+<div class="page-header text-center" id="software-header">
+  <h1 id="app-title">TideWatch</h1>
+  <p class="large">Flood alerts for coastal neighborhoods using cheap water-level sensors.</p>
+</div>
+<article id="app-details"><div class="row">
+<div class="large-9 columns" id="app-details-left">
+  <div id="gallery"><ul><li><p>Screenshot caption should be ignored entirely here</p></li></ul></div>
+  <div>
+  <h2>Inspiration</h2>
+  <p>Coastal neighborhoods often get less than an hour of warning before streets flood. We wanted residents to know about rising water before it reaches their doorstep, without relying on expensive municipal gauges.</p>
+<h2>What it does</h2>
+<p>TideWatch reads ultrasonic water level sensors mounted under storm drains and pushes a text message to subscribed residents when the reading climbs past a threshold that the neighborhood association sets on a shared dashboard.</p>
+<h2>How we built it</h2>
+<p>Each sensor node is an ESP32 with a solar panel that reports over LoRa to a gateway on a community center roof, which forwards readings to a small Flask service backed by SQLite.</p>
+  <h2>What's next for TideWatch</h2>
+  <p>More sensors.</p>
+  <script>document.title = "pwned"</script>
+  </div>
+  <div id="built-with"><h2>Built With</h2><ul><li><span class="cp-tag">esp32</span></li><li><span class="cp-tag">flask</span></li></ul></div>
+  <div class="app-links section"><h2>Try it out</h2><ul><li><a href="https://github.com/example/tidewatch">github.com</a></li></ul></div>
+</div>
+<aside class="large-3 columns" id="app-details-right">
+  <div id="submissions" class="section"><ul class="software-list-with-thumbnail"><li>
+    <div class="software-list-content"><p><a href="https://harbor-hack-2026.devpost.com/">Harbor Hack 2026</a></p></div>
+  </li></ul></div>
+  <section id="app-team"><ul class="no-bullet">
+    <li class="software-team-member"><figure><a class="user-profile-link" href="https://devpost.com/ana_k"><img alt="Ana K"></a></figure>
+      <a class="user-profile-link" href="https://devpost.com/ana_k">Ana K</a></li>
+    <li class="software-team-member"><a class="user-profile-link" href="/benr">Ben R</a></li>
+    <li class="software-team-member"><a class="user-profile-link" href="https://devpost.com/ana_k">Ana K</a></li>
+  </ul></section>
+</aside>
+</div></article>
+</body></html>

@@ -1,0 +1,12 @@
+{
+  "addons": {
+    "second-look@yatovoid": {
+      "updates": [
+        {
+          "version": "0.1.0",
+          "update_link": "https://github.com/YatoVoid/second-look/releases/download/v0.1.0/second-look-firefox.xpi"
+        }
+      ]
+    }
+  }
+}

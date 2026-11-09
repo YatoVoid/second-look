@@ -7,7 +7,9 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test tests/",
-    "lint:firefox": "npx --yes web-ext@8 lint --source-dir dist/firefox"
+    "lint:firefox": "npx --yes web-ext@8 lint --self-hosted --source-dir dist/firefox",
+    "package:chrome": "npm run build && mkdir -p release && rm -f release/second-look-chrome.zip && cd dist/chrome && zip -qrX ../../release/second-look-chrome.zip .",
+    "sign:firefox": "npm run build && npx --yes web-ext@8 sign --channel=unlisted --source-dir dist/firefox --artifacts-dir release"
   },
   "devDependencies": {
     "jsdom": "^26.1.0"

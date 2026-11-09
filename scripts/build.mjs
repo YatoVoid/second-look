@@ -19,6 +19,7 @@ const targets = {
       gecko: {
         id: 'second-look@yatovoid',
         strict_min_version: '128.0',
+        update_url: 'https://raw.githubusercontent.com/YatoVoid/second-look/main/updates.json',
         data_collection_permissions: { required: ['none'] },
       },
     },

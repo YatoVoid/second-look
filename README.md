@@ -79,15 +79,33 @@ A member who built **RideShare Campus** (carpools for students) enters **RideSha
 
 ## Install
 
-Build it, then load it unpacked:
+Second Look isn't on the Chrome Web Store or addons.mozilla.org. Download it from the [latest release](https://github.com/YatoVoid/second-look/releases/latest).
+
+**Firefox / Zen (128+)**
+
+1. Download [second-look-firefox.xpi](https://github.com/YatoVoid/second-look/releases/latest/download/second-look-firefox.xpi).
+2. Drag the file onto a Firefox window, or open `about:addons`, click the gear and pick **Install Add-on From File**.
+
+Mozilla signs it, so it installs like any other add-on. It updates itself when a new release comes out.
+
+**Chrome / Edge / Brave (121+)**
+
+Chrome only installs extensions from its store, so this one loads in developer mode:
+
+1. Download [second-look-chrome.zip](https://github.com/YatoVoid/second-look/releases/latest/download/second-look-chrome.zip) and unzip it somewhere it can stay.
+2. Open `chrome://extensions` (`edge://extensions` in Edge) and turn on **Developer mode**.
+3. Click **Load unpacked** and pick the unzipped folder.
+
+It doesn't update itself. For a new version, replace the folder's contents and click the reload arrow on the extension's card.
+
+**From source**
 
 ```sh
 npm install
 npm run build
 ```
 
-- **Chrome / Edge (121+)**: `chrome://extensions` → Developer mode → Load unpacked → `dist/chrome`.
-- **Firefox / Zen (128+)**: `about:debugging#/runtime/this-firefox` → Load Temporary Add-on → `dist/firefox/manifest.json`.
+Then load `dist/chrome` as above, or in Firefox open `about:debugging#/runtime/this-firefox`, click **Load Temporary Add-on** and pick `dist/firefox/manifest.json`. A temporary add-on is removed when the browser closes.
 
 ## Use
 
@@ -172,6 +190,14 @@ npm test              # node:test with synthetic HTML fixtures, no network
 npm run build         # dist/chrome and dist/firefox
 npm run lint:firefox
 ```
+
+### Release
+
+1. Set the new version in `package.json` and `src/manifest.base.json`.
+2. `npm run package:chrome` writes `release/second-look-chrome.zip`.
+3. `npm run sign:firefox` sends the build to Mozilla for unlisted signing and saves the `.xpi` in `release/`. It needs `WEB_EXT_API_KEY` and `WEB_EXT_API_SECRET` from [addons.mozilla.org/developers/addon/api/key](https://addons.mozilla.org/developers/addon/api/key/). Rename the file to `second-look-firefox.xpi`.
+4. `gh release create v<version> release/second-look-chrome.zip release/second-look-firefox.xpi`
+5. Add the version and its `.xpi` link to `updates.json` and push. Installed Firefox copies check that file for updates.
 
 `web-ext lint` gives one warning, `UNSAFE_VAR_ASSIGNMENT`, on the `import()` in `content/loader.js`. Its argument is always `runtime.getURL('content/main.js')`.
 

@@ -79,33 +79,33 @@ A member who built **RideShare Campus** (carpools for students) enters **RideSha
 
 ## Install
 
-Second Look isn't on the Chrome Web Store or addons.mozilla.org. Download it from the [latest release](https://github.com/YatoVoid/second-look/releases/latest).
-
-**Firefox / Zen (128+)**
-
-1. Download [second-look-firefox.xpi](https://github.com/YatoVoid/second-look/releases/latest/download/second-look-firefox.xpi).
-2. Drag the file onto a Firefox window, or open `about:addons`, click the gear and pick **Install Add-on From File**.
-
-Mozilla signs it, so it installs like any other add-on. It updates itself when a new release comes out.
+Second Look isn't on the Chrome Web Store or addons.mozilla.org.
 
 **Chrome / Edge / Brave (121+)**
 
 Chrome only installs extensions from its store, so this one loads in developer mode:
 
-1. Download [second-look-chrome.zip](https://github.com/YatoVoid/second-look/releases/latest/download/second-look-chrome.zip) and unzip it somewhere it can stay.
+1. Download [second-look-chrome.zip](https://github.com/YatoVoid/second-look/releases/latest/download/second-look-chrome.zip) from the [latest release](https://github.com/YatoVoid/second-look/releases/latest) and unzip it somewhere it can stay.
 2. Open `chrome://extensions` (`edge://extensions` in Edge) and turn on **Developer mode**.
 3. Click **Load unpacked** and pick the unzipped folder.
 
 It doesn't update itself. For a new version, replace the folder's contents and click the reload arrow on the extension's card.
 
-**From source**
+**Firefox / Zen (128+)**
+
+There is no Firefox download yet, so you have to build it yourself. You need [Node 20+](https://nodejs.org/) and git.
 
 ```sh
+git clone https://github.com/YatoVoid/second-look.git
+cd second-look
 npm install
 npm run build
 ```
 
-Then load `dist/chrome` as above, or in Firefox open `about:debugging#/runtime/this-firefox`, click **Load Temporary Add-on** and pick `dist/firefox/manifest.json`. A temporary add-on is removed when the browser closes.
+1. Open `about:debugging#/runtime/this-firefox`.
+2. Click **Load Temporary Add-on** and pick `dist/firefox/manifest.json`.
+
+Firefox removes temporary add-ons when it closes, so repeat step 2 after every restart. To update, run `git pull` and `npm run build`, then click **Reload** on the extension in `about:debugging`.
 
 ## Use
 

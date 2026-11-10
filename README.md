@@ -8,6 +8,20 @@ It is not a plagiarism verdict. A match can have an ordinary explanation: a team
 
 The screenshots and GIF use a made-up hackathon served from local test pages. No real projects or people appear in them.
 
+## Contents
+
+- [How it decides to flag](#how-it-decides-to-flag)
+- [Examples](#examples)
+- [Screenshots](#screenshots)
+- [Install](#install)
+- [Use](#use)
+- [Permissions](#permissions)
+- [Data handling](#data-handling)
+- [Rate limits](#rate-limits)
+- [Limitations](#limitations)
+- [Develop](#develop)
+- [Support](#support)
+
 ## How it decides to flag
 
 For each project it reads the project page, every team member's Devpost profile, the member's other projects that look related, and (if you allow it) personal sites linked from those profiles. Then it compares the write-ups text to text.
